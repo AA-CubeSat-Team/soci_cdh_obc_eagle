@@ -14996,12 +14996,16 @@ SMD wideband transformer</description>
 <text x="563.88" y="419.1" size="1.778" layer="91" rot="R90">Alternate Battery Supply</text>
 <text x="670.56" y="393.7" size="1.778" layer="91">DNP</text>
 <text x="701.04" y="408.94" size="1.778" layer="91" rot="R90">DCDC_OUT</text>
-<text x="320.04" y="365.76" size="1.778" layer="91">Pin not connected</text>
-<text x="320.04" y="363.22" size="1.778" layer="91">Pin not connected</text>
 <text x="467.36" y="355.6" size="1.778" layer="91">DNP</text>
 <text x="523.24" y="353.06" size="1.778" layer="91">MCU_DCDC_IN_3V3</text>
 <text x="662.94" y="320.04" size="1.778" layer="91">DCDC_3V3</text>
 <text x="297.18" y="134.62" size="1.778" layer="97">USB_HOST_PWR </text>
+<text x="320.04" y="365.76" size="1.778" layer="97">Pin not connected</text>
+<text x="320.04" y="363.22" size="1.778" layer="97">Pin not connected</text>
+<text x="320.04" y="246.38" size="1.778" layer="97">Pin not connected</text>
+<text x="320.04" y="248.92" size="1.778" layer="97">Pin not connected</text>
+<text x="320.04" y="251.46" size="1.778" layer="97">Pin not connected</text>
+<text x="320.04" y="254" size="1.778" layer="97">Pin not connected</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="375.92" y="251.46" smashed="yes">
@@ -16752,6 +16756,114 @@ SMD wideband transformer</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="GPIO_B0_15"/>
 <wire x1="342.9" y1="182.88" x2="304.8" y2="182.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LCDIF_VSYNC" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_B0_03"/>
+<wire x1="342.9" y1="213.36" x2="327.66" y2="213.36" width="0.1524" layer="91"/>
+<label x="327.66" y="213.36" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LCDIF_HSYNC" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_B0_02"/>
+<wire x1="342.9" y1="215.9" x2="327.66" y2="215.9" width="0.1524" layer="91"/>
+<label x="327.66" y="215.9" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LCDIF_ENABLE" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_B0_01"/>
+<wire x1="342.9" y1="218.44" x2="327.66" y2="218.44" width="0.1524" layer="91"/>
+<label x="327.66" y="218.44" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LCDIF_CLK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_B0_00"/>
+<wire x1="342.9" y1="220.98" x2="327.66" y2="220.98" width="0.1524" layer="91"/>
+<label x="327.66" y="220.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_TX_SYNC" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_15"/>
+<wire x1="342.9" y1="226.06" x2="320.04" y2="226.06" width="0.1524" layer="91"/>
+<label x="320.04" y="226.06" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_TX_BCLK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_14"/>
+<wire x1="342.9" y1="228.6" x2="320.04" y2="228.6" width="0.1524" layer="91"/>
+<label x="320.04" y="228.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_TXD" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_13"/>
+<wire x1="342.9" y1="231.14" x2="320.04" y2="231.14" width="0.1524" layer="91"/>
+<label x="320.04" y="231.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_RXD" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_12"/>
+<wire x1="342.9" y1="233.68" x2="320.04" y2="233.68" width="0.1524" layer="91"/>
+<label x="320.04" y="233.68" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_RX_BCLK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_11"/>
+<wire x1="342.9" y1="236.22" x2="320.04" y2="236.22" width="0.1524" layer="91"/>
+<label x="320.04" y="236.22" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_RX_SYNC" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_10"/>
+<wire x1="342.9" y1="238.76" x2="320.04" y2="238.76" width="0.1524" layer="91"/>
+<label x="320.04" y="238.76" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SAI1_MCLK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_09"/>
+<wire x1="342.9" y1="241.3" x2="320.04" y2="241.3" width="0.1524" layer="91"/>
+<label x="320.04" y="241.3" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="AUD_INT" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_08"/>
+<wire x1="342.9" y1="243.84" x2="320.04" y2="243.84" width="0.1524" layer="91"/>
+<label x="320.04" y="243.84" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$64" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_03"/>
+<wire x1="342.9" y1="256.54" x2="320.04" y2="256.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$65" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_02"/>
+<wire x1="342.9" y1="259.08" x2="320.04" y2="259.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$66" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_01"/>
+<wire x1="342.9" y1="261.62" x2="320.04" y2="261.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="GPIO_AD_B1_00"/>
+<wire x1="342.9" y1="264.16" x2="320.04" y2="264.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -14822,6 +14822,8 @@ by R. Vogg  15.March.2002</description>
 <part name="R31" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="R" device="" value="0 Ohm"/>
 <part name="Q2" library="transistor-fet" library_urn="urn:adsk.eagle:library:396" deviceset="BUZ72" device="" package3d_urn="urn:adsk.eagle:package:28520/1"/>
 <part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R32" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="R" device="" value="100k"/>
+<part name="3V3_2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17472,15 +17474,15 @@ by R. Vogg  15.March.2002</description>
 <attribute name="SHEET" x="843.28" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="774.7" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="J1" gate="G$1" x="355.6" y="200.66" smashed="yes">
-<attribute name="NAME" x="350.52" y="210.82" size="1.778" layer="95"/>
-<attribute name="VALUE" x="350.52" y="187.96" size="1.778" layer="96"/>
+<instance part="J1" gate="G$1" x="127" y="228.6" smashed="yes">
+<attribute name="NAME" x="121.92" y="238.76" size="1.778" layer="95"/>
+<attribute name="VALUE" x="121.92" y="215.9" size="1.778" layer="96"/>
 </instance>
 <instance part="U2" gate="G$1" x="452.12" y="218.44" smashed="yes">
 <attribute name="NAME" x="441.9555" y="227.079809375" size="1.677140625" layer="95"/>
 <attribute name="VALUE" x="441.9544" y="208.782709375" size="1.67731875" layer="96"/>
 </instance>
-<instance part="U3" gate="G$1" x="406.4" y="287.02" smashed="yes"/>
+<instance part="U3" gate="G$1" x="228.6" y="233.68" smashed="yes"/>
 <instance part="GND30" gate="1" x="469.9" y="203.2" smashed="yes">
 <attribute name="VALUE" x="467.36" y="200.66" size="1.778" layer="96"/>
 </instance>
@@ -17539,6 +17541,13 @@ by R. Vogg  15.March.2002</description>
 </instance>
 <instance part="GND35" gate="1" x="429.26" y="223.52" smashed="yes">
 <attribute name="VALUE" x="426.72" y="220.98" size="1.778" layer="96"/>
+</instance>
+<instance part="R32" gate="G$1" x="434.34" y="243.84" smashed="yes" rot="R90">
+<attribute name="NAME" x="431.8" y="241.3" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="438.15" y="241.3" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="3V3_2" gate="G$1" x="434.34" y="256.54" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="436.88" y="251.46" size="1.778" layer="96" rot="MR90"/>
 </instance>
 </instances>
 <busses>
@@ -17650,12 +17659,22 @@ by R. Vogg  15.March.2002</description>
 <wire x1="434.34" y1="223.52" x2="434.34" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="434.34" y1="233.68" x2="429.26" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="R32" gate="G$1" pin="1"/>
+<wire x1="434.34" y1="233.68" x2="434.34" y2="238.76" width="0.1524" layer="91"/>
+<junction x="434.34" y="233.68"/>
 </segment>
 </net>
 <net name="N$45" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="G"/>
 <wire x1="419.1" y1="228.6" x2="401.32" y2="228.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="R32" gate="G$1" pin="2"/>
+<pinref part="3V3_2" gate="G$1" pin="+3V3"/>
+<wire x1="434.34" y1="248.92" x2="434.34" y2="254" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

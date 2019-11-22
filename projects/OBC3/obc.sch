@@ -15072,6 +15072,8 @@ SMD wideband transformer</description>
 <part name="R73" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="0 Ohm"/>
 <part name="R62" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="0 Ohm"/>
 <part name="R63" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="0 Ohm"/>
+<part name="GND45" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND46" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19169,9 +19171,9 @@ SMD wideband transformer</description>
 <attribute name="NAME" x="439.42" y="328.676" size="1.778" layer="95"/>
 <attribute name="VALUE" x="439.42" y="241.3" size="1.778" layer="96"/>
 </instance>
-<instance part="X1" gate="-J2" x="520.7" y="287.02" smashed="yes">
-<attribute name="NAME" x="508" y="313.436" size="1.778" layer="95"/>
-<attribute name="VALUE" x="508" y="256.54" size="1.778" layer="96"/>
+<instance part="X1" gate="-J2" x="551.18" y="287.02" smashed="yes">
+<attribute name="NAME" x="538.48" y="313.436" size="1.778" layer="95"/>
+<attribute name="VALUE" x="538.48" y="256.54" size="1.778" layer="96"/>
 </instance>
 <instance part="X1" gate="GND1" x="480.06" y="251.46" smashed="yes">
 <attribute name="NAME" x="482.092" y="250.698" size="1.778" layer="95"/>
@@ -19185,6 +19187,81 @@ SMD wideband transformer</description>
 <instance part="X1" gate="GND4" x="480.06" y="243.84" smashed="yes">
 <attribute name="NAME" x="482.092" y="243.078" size="1.778" layer="95"/>
 </instance>
+<instance part="GND45" gate="1" x="528.32" y="251.46" smashed="yes">
+<attribute name="VALUE" x="525.78" y="248.92" size="1.778" layer="96"/>
+</instance>
+<instance part="GND46" gate="1" x="416.56" y="220.98" smashed="yes">
+<attribute name="VALUE" x="414.02" y="218.44" size="1.778" layer="96"/>
+</instance>
+</instances>
+<busses>
+</busses>
+<nets>
+<net name="GND" class="0">
+<segment>
+<pinref part="X1" gate="-J2" pin="0V@1"/>
+<pinref part="GND45" gate="1" pin="GND"/>
+<wire x1="535.94" y1="309.88" x2="528.32" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="528.32" y1="309.88" x2="528.32" y2="254" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-J2" pin="0V@2"/>
+<wire x1="566.42" y1="309.88" x2="576.58" y2="309.88" width="0.1524" layer="91"/>
+<wire x1="576.58" y1="309.88" x2="576.58" y2="320.04" width="0.1524" layer="91"/>
+<wire x1="576.58" y1="320.04" x2="528.32" y2="320.04" width="0.1524" layer="91"/>
+<wire x1="528.32" y1="320.04" x2="528.32" y2="309.88" width="0.1524" layer="91"/>
+<junction x="528.32" y="309.88"/>
+<pinref part="X1" gate="-J2" pin="MEMCS16"/>
+<wire x1="566.42" y1="307.34" x2="576.58" y2="307.34" width="0.1524" layer="91"/>
+<wire x1="576.58" y1="307.34" x2="576.58" y2="309.88" width="0.1524" layer="91"/>
+<junction x="576.58" y="309.88"/>
+<pinref part="X1" gate="-J2" pin="0V@3"/>
+<wire x1="566.42" y1="264.16" x2="574.04" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-J2" pin="0V@4"/>
+<wire x1="574.04" y1="264.16" x2="574.04" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="574.04" y1="261.62" x2="566.42" y2="261.62" width="0.1524" layer="91"/>
+<wire x1="574.04" y1="261.62" x2="574.04" y2="254" width="0.1524" layer="91"/>
+<junction x="574.04" y="261.62"/>
+<wire x1="574.04" y1="254" x2="528.32" y2="254" width="0.1524" layer="91"/>
+<junction x="528.32" y="254"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-J1" pin="0V@1"/>
+<wire x1="436.88" y1="246.38" x2="431.8" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="431.8" y1="246.38" x2="431.8" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="GND46" gate="1" pin="GND"/>
+<wire x1="431.8" y1="223.52" x2="416.56" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-J1" pin="0V@3"/>
+<wire x1="467.36" y1="248.92" x2="472.44" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-J1" pin="0V@4"/>
+<wire x1="472.44" y1="248.92" x2="472.44" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="472.44" y1="246.38" x2="467.36" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="472.44" y1="246.38" x2="472.44" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="472.44" y1="223.52" x2="431.8" y2="223.52" width="0.1524" layer="91"/>
+<junction x="472.44" y="246.38"/>
+<junction x="431.8" y="223.52"/>
+<pinref part="X1" gate="-J1" pin="0V@2"/>
+<wire x1="467.36" y1="325.12" x2="472.44" y2="325.12" width="0.1524" layer="91"/>
+<wire x1="472.44" y1="325.12" x2="472.44" y2="248.92" width="0.1524" layer="91"/>
+<junction x="472.44" y="248.92"/>
+</segment>
+</net>
+</nets>
+</sheet>
+<sheet>
+<description>OpenSDA</description>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+<sheet>
+<description>Fuse Map</description>
+<plain>
+</plain>
+<instances>
 </instances>
 <busses>
 </busses>
